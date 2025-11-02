@@ -9,3 +9,7 @@ This application primarly uses python for the backend and react for the frontend
 
 # Setup
 A .env is needed where a OPENAI_API_KEY is needed. The key is obtainable at https://openai.com/api/.
+
+# Summary 
+After setup simply upload a file from your local pc by clicking on the black button
+![alt text](image.png)
