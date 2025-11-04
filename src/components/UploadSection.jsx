@@ -19,7 +19,9 @@ function UploadSection({ onResult }) {
     form.append("file", file);
 
     try {
-      const res = await fetch("/upload", {
+      const API_BASE = process.env.REACT_APP_API_URL || "";
+      const url = `${API_BASE}/upload`;
+      const res = await fetch(url, {
         method: "POST",
         body: form,
       });
@@ -28,12 +30,12 @@ function UploadSection({ onResult }) {
         const err = data && data.error ? data.error : `HTTP ${res.status}`;
         throw new Error(err);
       }
-      setStatus("done");
-      if (typeof onResult === "function") onResult(data);
+  setStatus("done");
+  if (typeof onResult === "function") onResult({ ...data, filename: file.name });
     } catch (err) {
       console.error("Upload failed:", err);
-      setStatus("error");
-      if (typeof onResult === "function") onResult({ error: err.message || String(err) });
+  setStatus("error");
+  if (typeof onResult === "function") onResult({ error: err.message || String(err), filename: file.name });
     }
   };
 

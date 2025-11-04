@@ -2,3 +2,4 @@ flask
 python-dotenv
 openai
 PyPDF2
+flask-cors

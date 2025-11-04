@@ -9,7 +9,7 @@ export default function HomePage() {
 
   const handleUploadResult = (res) => {
     // navigate to /summary and pass the response in location.state
-    navigate("/summary", { state: { summaryData: res } });
+    navigate("/Dashboard", { state: { summaryData: res } });
   };
 
   return (

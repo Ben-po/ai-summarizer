@@ -13,3 +13,11 @@ A .env is needed where a OPENAI_API_KEY is needed. The key is obtainable at http
 # Summary 
 After setup simply upload a file from your local pc by clicking on the black button
 ![alt text](image.png)
+
+Once file is uploaded summary will appear in the main container where if OpenAI is unavailable a fall back system was implemented which gives a local summary
+
+Example A:
+![alt text](image-1.png)
+
+Example B:
+![alt text](image-2.png)
