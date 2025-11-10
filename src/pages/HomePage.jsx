@@ -1,22 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import NavLinks from "../components/NavLinks";
-import UploadSection from "../components/UploadSection";
+import CreditBar from "../components/CreditBar";
 import "../App.css";
 
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const handleUploadResult = (res) => {
-    // navigate to /summary and pass the response in location.state
-    navigate("/Dashboard", { state: { summaryData: res } });
-  };
 
   return (
     <div className="home-page">
       <Navbar />
       <NavLinks />
-      <UploadSection onResult={handleUploadResult} />
+
+      <div className="Info-section">
+        <h2>Welcome to AI-Powered Summaries</h2>
+        <p>This is an AI-Powered summarizer that helps you quickly generate concise summaries of uploaded files first built to help students quickly and effectently learn materials.</p>
+        <h1>Get started now! No login required</h1>
+      </div>
+
+
+      <button className="Dashboard-btn" onClick={() => navigate("/Dashboard")}>
+        Clicks to start summarizing
+      </button>
+
+      <CreditBar />
+      
     </div>
   );
 }

@@ -17,6 +17,7 @@
   align-items: center;
   padding: 1rem 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-height: 50px;
 }
 
 .logo {
@@ -42,31 +43,6 @@
   gap: 1rem;
 }
 
-.login-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 9999px;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.login-btn:hover {
-  background-color: #333;
-}
-
-.signup-btn {
-  background: none;
-  border: none;
-  color: black;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.signup-btn:hover {
-  text-decoration: underline;
-}
 
 /* Nav Links */
 .nav-links {
@@ -259,3 +235,112 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+/* Home page */
+.Dashboard-btn {
+  margin-top: 6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1.5rem 4rem;
+  display: flex;
+  margin-top: 150px;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.Info-section {
+  margin-top: 50px;
+  text-align: center;
+  background-color: #e8f0ff;
+  border:none;
+  border-radius: 20px;
+  min-height: 80px; /* shorter default */
+  max-height: 220px; /* do not grow beyond this; enable scrolling */
+  overflow: auto;
+  padding: 0.5rem; /* slightly tighter padding */
+  font-size: 0.95rem;
+}
+
+/* Credit Bar */
+.credit-bar {
+  background-color: #e8f0ff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  min-height: 50px;
+  gap: 5rem;
+}
+.credit-bar button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.credit-bar button:hover {
+  color: black;
+}
+/* leave space at the bottom of the dashboard so content isn't covered by the fixed credit bar */
+.dashboard {
+  padding-bottom: 60px;
+}
+
+/* Modal styles used by CreditBar Contact popup */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  max-width: 420px;
+  width: calc(100% - 48px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.modal a { color: #007bff; }
+
+/* Modal footer and buttons (used by CreditBar popup) */
+.modal-footer {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.modal-close {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: #0056b3;
+}
+
+

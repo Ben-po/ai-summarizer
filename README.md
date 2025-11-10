@@ -2,7 +2,7 @@
 Application capable of summarizing a pdf file using AI.
 
 # Overview
-This application uses OpenAI to summarise uploaded files, It has the capability to summarise local text as well however that aspect of the app is not implemented into the UI/UX of the application.
+This application uses OpenAI to summarise uploaded files, It has the capability to summarise local text as well however that aspect of the app is not implemented into the UI/UX of the application. This application was created to help students understand and learn class materials more effectively.
 
 # Composition
 This application primarly uses python for the backend and react for the frontend
@@ -21,3 +21,7 @@ Example A:
 
 Example B:
 ![alt text](image-2.png)
+
+# Draft 2
+Improved UI of the Home page.
+![alt text](image-3.png)
